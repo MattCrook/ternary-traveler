@@ -32,12 +32,12 @@ const postSavedDestinations = async () => {
       const description = document.getElementById("descriptionInput").value;
       const cost = document.getElementById("costInput").value;
       const name = document.getElementById("locationInput").value;
-      const interestObject = { { id, name, description, cost, review }};
+      const interestObject = { id, interest, description, cost, review };
       // promise for POST request...then() blowing away and reloading page with updated version
-      const hiddenJournalId = document.querySelector("#journalId").value;
+      const hiddenJournalId = document.querySelector("#hiddenBlogId").value;
       if (hiddenJournalId !== "") {
         apiManager
-          .updateJournal(hiddenJournalId, journalObject)
+          .updateDestination(hiddenId, interestObject)
           .then(response => {
             apiManager.getJournal().then(entriesFromAPI => {
               const entryLogContainer = document.querySelector(".entry_log");

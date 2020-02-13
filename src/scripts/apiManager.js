@@ -7,26 +7,26 @@ const apiManager = {
         const response = await fetch(`http://localhost:8088/interests`);
         return await response.json();
       },
-    postSavedInterests(interestsObj) {
+    postSavedInterests(interestObject) {
       return fetch("http://localhost:8088/interests", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(journalObj)
+        body: JSON.stringify(interestObject)
       });
     },
-    updateDestination (journalId, journalEntry) {
-      return fetch(`http://localhost:8088/entries/${journalId}`, {
+    updateDestination (hiddenId, interestObject) {
+      return fetch(`http://localhost:8088/entries/${hiddenId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(journalEntry)
+        body: JSON.stringify(interestObject)
       });
     },
-    async deleteDestination(journalEntry) {
-      const response = await fetch(`http://localhost:8088/entries/${journalEntry}`, {
+    async deleteDestination(interestObject) {
+      const response = await fetch(`http://localhost:8088/entries/${interestObject}`, {
         method: "DELETE"
       });
       return await response.json();
