@@ -1,6 +1,6 @@
 const interestHtmlSkeleton = ({ id, name, description, cost, review }) => {
     return `
-        <div class="blog_post_interests">
+        <div class="blog_post_interests--${id}">
         <header class="destination__name">
             <h1>${name}</h1>
         </header>

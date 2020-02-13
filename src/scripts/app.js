@@ -1,8 +1,9 @@
 import renderInterest from "./renderToDOM.js";
 import interestHtmlSkeleton from "./interestHTML.js";
 import apiManager from "./apiManager.js";
+import postSavedDestinations from "./events.js"
 
-const init = async () => {
+const getDataFromApi = async () => {
   const savedPlaces = apiManager.getSavedPlaces;
   const savedInterests = apiManager.getSavedInterests;
   let values = await Promise.all([savedPlaces(), savedInterests()]);
@@ -21,36 +22,12 @@ const init = async () => {
     const interestHTML = interestHtmlSkeleton(interestObject);
     renderInterest(interestHTML);
   });
+  postSavedDestinations()
 };
 
-const postSavedDestinations = async () => {
-  document
-    .querySelector('input[type="submit"]')
-    .addEventListener("click", event => {
-      event.preventDefault();
-      const interest = document.getElementById("pointOfInterest").value;
-      const description = document.getElementById("descriptionInput").value;
-      const cost = document.getElementById("costInput").value;
-      const name = document.getElementById("locationInput").value;
-      const interestObject = { id, interest, description, cost, review };
-      // promise for POST request...then() blowing away and reloading page with updated version
-      const hiddenJournalId = document.querySelector("#hiddenBlogId").value;
-      if (hiddenJournalId !== "") {
-        apiManager
-          .updateDestination(hiddenId, interestObject)
-          .then(response => {
-            apiManager.getJournal().then(entriesFromAPI => {
-              const entryLogContainer = document.querySelector(".entry_log");
-              entryLogContainer.innerHTML = "";
-              entriesFromAPI.forEach(journalEntry => {
-                const entryHTML = journalFactory(journalEntry);
-                renderEntry(entryHTML);
-              });
-            });
-          })
-          .catch(err => console.log({ err }));
-    });
-};
+export { getDataFromApi as default }
+
+getDataFromApi()
 
 
 
@@ -96,5 +73,3 @@ const postSavedDestinations = async () => {
 //   radioFilter.getRadioButton();
 //   deleteJournalAction.deleteButtonAction();
 //   editButtonAction();
-
-init();
