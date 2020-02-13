@@ -2,6 +2,8 @@ import renderInterest from "./renderToDOM.js";
 import interestHtmlSkeleton from "./interestHTML.js";
 import apiManager from "./apiManager.js";
 import postSavedDestinations from "./events.js"
+import { editButtonAction } from "./editEvent.js"
+
 
 const getDataFromApi = async () => {
   const savedPlaces = apiManager.getSavedPlaces;
@@ -23,6 +25,7 @@ const getDataFromApi = async () => {
     renderInterest(interestHTML);
   });
   postSavedDestinations()
+  editButtonAction()
 };
 
 export { getDataFromApi as default }

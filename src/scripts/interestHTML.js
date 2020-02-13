@@ -1,16 +1,20 @@
 const interestHtmlSkeleton = ({ id, name, description, cost, review }) => {
-    return `
+  return `
         <div class="blog_post_interests--${id}">
         <header class="destination__name">
-            <h1>${name}</h1>
+        <h1>Interest</h1>
+            <h2>${name}</h2>
         </header>
         <section class="description">
+        <h1>Description</h1>
             ${description}
         </section>
         <section class="cost">
-            ${cost}
+        <h1>Cost</h1>
+            $${cost}
         </section>
         <div class="review-point-of-interest">
+        <h1>Review</h1>
         ${review}
         </div>
         <section class="edit-delete-btns">
@@ -19,6 +23,6 @@ const interestHtmlSkeleton = ({ id, name, description, cost, review }) => {
           </section>
     </div>
         `;
-  };
+};
 
-export { interestHtmlSkeleton as default}
+export { interestHtmlSkeleton as default };

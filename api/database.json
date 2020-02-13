@@ -22,7 +22,7 @@
       "placeId": 1,
       "name": "Local Market",
       "description": "Local market where you can purchase local products and try the local food",
-      "cost": 0,
+      "cost": "100",
       "review": ""
     },
     {
@@ -30,7 +30,7 @@
       "placeId": 2,
       "name": "Local Market",
       "description": "Local market where you can purchase local products and try the local food",
-      "cost": 0,
+      "cost": "50",
       "review": "You can definitely get things for a lower price if you are willing to bargain!"
     },
     {

@@ -16,8 +16,8 @@ const apiManager = {
         body: JSON.stringify(interestObject)
       });
     },
-    updateDestination (hiddenId, interestObject) {
-      return fetch(`http://localhost:8088/entries/${hiddenId}`, {
+    updateDestination (interestId, interestObject) {
+      return fetch(`http://localhost:8088/interests/${interestId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -26,7 +26,7 @@ const apiManager = {
       });
     },
     async deleteDestination(interestObject) {
-      const response = await fetch(`http://localhost:8088/entries/${interestObject}`, {
+      const response = await fetch(`http://localhost:8088/interests/${interestObject}`, {
         method: "DELETE"
       });
       return await response.json();

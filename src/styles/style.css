@@ -1,0 +1,14 @@
+.interest_log {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.edit-delete-btns {
+border: solid black 1px;
+align-content: flex-start;
+}
+
+.review-point-of-interest {
+    border: black;
+}
