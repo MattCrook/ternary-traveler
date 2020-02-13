@@ -10,41 +10,42 @@
 </head>
 
 <body>
-    <h1>Daily Travel Blog</h1>
+    <h1 id="banner">Daily Travel Blog</h1>
     <section id="form">
-            <input type="hidden" id="hiddenBloglId" value="" />
-            <fieldset>
-                <div>
-                    <label for="pointOfInterestInput">Point Of Interest</label>
-                    <input type="text" name="pointOfInterest" id="pointOfInterest">
-                </div>
-                <div>
-                    <label for="descriptionInput">Description</label>
-                    <input type="text" name="descriptionInput" id="descriptionInput">
-                </div>
-                <div>
-                    <label for="costInput">Cost</label>
-                    <input type="number" name="costInput" id="costInput">
-                </div>
-                <div>
-                    <label for="reviewInput">Review</label>
-                    <input type="text" name="reviewInput" id="reviewInput">
-                </div>
-                <div>
-                    <label for="locationInput">Location</label>
-                    <select id="locationInput">
-                        <option value="italy">Italy</option>
-                        <option value="switzerland">Switzerland</option>
-                        <option value="france">France</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset id="submit-button">
-                <input type="submit" value="Submit Travel Destination">
-            </fieldset>
-            <div class="interest_log">
+        <input type="hidden" id="hiddenBlogId" value="" />
+        <fieldset>
+            <div>
+                <label for="pointOfInterestInput">Point Of Interest</label>
+                <input type="text" name="pointOfInterest" id="pointOfInterest">
             </div>
-            <script type="module" src="src/scripts/app.js"></script>
+            <div>
+                <label for="descriptionInput">Description</label>
+                <input type="text" name="descriptionInput" id="descriptionInput">
+            </div>
+            <div>
+                <label for="costInput">Cost</label>
+                <input type="number" name="costInput" id="costInput">
+            </div>
+            <div>
+                <label for="reviewInput">Review</label>
+                <input type="text" name="reviewInput" id="reviewInput">
+            </div>
+            <div>
+                <label for="locationInput">Location</label>
+                <select id="locationInput">
+                    <option value="italy">Italy</option>
+                    <option value="switzerland">Switzerland</option>
+                    <option value="france">France</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset id="submit-button">
+            <input type="submit" value="Submit Travel Destination">
+        </fieldset>
+    </section>
+    <div class="interest_log">
+    </div>
+    <script type="module" src="src/scripts/app.js"></script>
 </body>
 
 </html>

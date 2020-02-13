@@ -1,14 +1,73 @@
+body {
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+#banner {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
+  background-size: cover;
+  background-position: top center;
+  height: 250px;
+  width: 100%;
+  opacity: 0.8;
+  color: whitesmoke;
+  text-align: center;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.destination__name {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
 .interest_log {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+header.destination__name {
+    max-width: 20%;
+    border: 2px solid black;
 }
 
 
-.edit-delete-btns {
-border: solid black 1px;
-align-content: flex-start;
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
-.review-point-of-interest {
-    border: black;
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

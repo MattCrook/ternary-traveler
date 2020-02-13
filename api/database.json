@@ -34,24 +34,30 @@
       "review": "You can definitely get things for a lower price if you are willing to bargain!"
     },
     {
+      "hiddenBlogId": "",
       "interest": "Fiji",
       "description": "Its Warm",
+      "name": "switzerland",
       "cost": "500",
-      "review": "good",
+      "review": "Tired of rain. Beach is aweome.",
       "id": 3
     },
     {
-      "interest": "Fiji",
-      "description": "Its Warm",
-      "cost": "500",
-      "review": "good",
+      "hiddenBlogId": "",
+      "interest": "Fresh aire",
+      "description": "Mountains",
+      "name": "switzerland",
+      "cost": "1000",
+      "review": "Colorado is the best and my favorite. Vail is my second home. Have you noticed the amount of Burton attire i have?",
       "id": 4
     },
     {
-      "interest": "Fiji",
-      "description": "Its Warm",
-      "cost": "500",
-      "review": "watever",
+      "hiddenBlogId": "",
+      "interest": "Fresh aire",
+      "description": "Mountains",
+      "name": "switzerland",
+      "cost": "1000",
+      "review": "Colorado is the best and my favorite. Vail is my second home. Have you noticed the amount of Burton attire i have?",
       "id": 5
     }
   ]
